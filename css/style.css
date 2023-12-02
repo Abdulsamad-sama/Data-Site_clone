@@ -1,0 +1,91 @@
+/* || RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+head {
+  min-height: 100vh;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+  font-family: monospace;
+}
+
+/* || VARIABLES */
+
+:root {
+  /*COLOR*/
+  --LOGO-BG-COLOR: #000;
+
+  /*FONTS*/
+  --MAIN-FONT: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --LOGO-SIZE: 17rem;
+
+  /* || PADDING*/
+  --UL-PADDING: 20px 0 0 10px;
+}
+
+/* || UTILITY CLASSES */
+
+/* || GENERAL STYLES */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--MAIN-FONT);
+}
+
+.header_logo {
+  width: var(--LOGO-SIZE);
+}
+.header {
+  position: sticky;
+  display: flex;
+  padding: 10px;
+  background-color: #090;
+  justify-content: center;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  padding: var(--UL-PADDING);
+}
+
+li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+}
+
+li .anolink {
+  background-color: rgb(255, 194, 39);
+  border: 1.5px solid rgb(250, 246, 29);
+  border-radius: 50px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 5px 20px 5px 20px;
+}
+
+.dash {
+  height: 16px;
+  width: 16px;
+}
