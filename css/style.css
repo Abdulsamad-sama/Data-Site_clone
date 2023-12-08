@@ -36,6 +36,7 @@ textarea {
   --FADE-GREEN: #009900c2;
   --LINK-BG-COLOR: rgb(255, 194, 39);
   --LINK-BORDER: 1.5px solid rgb(250, 246, 29);
+  --NORM-BORDER: 1.5px solid var(--LOGO-BG-COLOR);
   --FONT-DEFAULT-COLOR: #000;
   --BIG-FONT-COLOR: #555;
   --RARE-WHITE: #fff;
@@ -43,14 +44,18 @@ textarea {
 
   /*FONTS*/
   --FF: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  --FS: clamp(11px, 3vh, 2.5rem);
+  --FS: clamp(18px, 3vh, 2.5rem);
+  --FW: 500;
   --BIG-FS: clamp(45px, 1vh, 65px);
+  --REVIEW-BIG-FS: clamp(3rem, 2vh, 9rem);
+  --REVIEW-FS: 1rem;
   --LOGO-SIZE: 17rem;
 
   /* || PADDING*/
   --HEADER-PADDING: 20px 0 0 10px;
   --ABOUT-PADDING: 80px 0 80px 0;
   --FEAT-PADDING: 115px 100px 0 100px;
+  --FEAT-H2-PADDING: 30px 0 30px 0;
   --SEC-FEAT-PADING: 150px 100px 0 100px;
   --IMAGE-HEIGHT: Clamp(600px, 2vh, 976px);
   --LINK-PADDING: 8px 30px 8px 30px;
@@ -81,6 +86,7 @@ body {
   color: var(--BIG-FONT-COLOR);
   font-size: var(--BIG-FS);
   font-weight: 600;
+  padding: var(--FEAT-H2-PADDING);
 }
 
 .divs {
@@ -89,7 +95,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 80px; */
+  /* padding: 20px; */
 }
 
 /* || HEADER */
@@ -130,6 +136,7 @@ body {
 li a,
 a {
   text-decoration: none;
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--RARE-WHITE);
 }
@@ -144,12 +151,16 @@ li .anolink,
   justify-content: center;
   justify-content: space-evenly;
   padding: var(--LINK-PADDING);
-  width: 130px;
 }
 
-.dash {
-  height: 16px;
-  width: 16px;
+.googleplay {
+  height: 50px;
+  width: 162px;
+}
+
+.icon {
+  height: auto;
+  width: 10.5%;
 }
 
 /* || FIRST PAGE */
@@ -174,22 +185,30 @@ li .anolink,
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7rem;
+  gap: 2rem;
   /* padding: 100px; */
 }
 
 .flex_items {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
   /* justify-self: baseline;
   text-align: end; */
   bottom: 0;
+  gap: 1rem;
+}
+
+.button {
+  display: flex;
+  gap: 1rem;
 }
 
 .section,
 .h1 {
   color: rgb(250, 246, 29);
-  font-weight: 500;
+  font-weight: var(--FW);
 }
 
 .subhead {
@@ -203,15 +222,16 @@ li .anolink,
 }
 
 .doublephone {
-  height: 95%;
+  height: auto;
+  width: 100%;
 }
 
-/* || ABOUT US */
+/* ||..............ABOUT US..............*/
 
 .aboutus {
   min-height: 90vh;
   text-align: center;
-  flex-direction: column;
+  flex-direction: center;
 }
 
 .roll {
@@ -222,47 +242,234 @@ li .anolink,
   justify-content: center;
 }
 
-/* || ABOUT US ENDS */
+/* ||..............FEATURES..............*/
 
-/* || FEATURES */
-
-.featuer {
+/* .feature {
   height: 2000px;
-}
+} */
 
 .feat {
   display: flex;
-  min-height: 100vh;
+  min-height: auto;
   justify-content: center;
-  padding: var(--FEAT-PADDING);
+  /*  padding: var(--FEAT-PADDING); */
+  padding: 40px;
   gap: 70px;
-  height: fit-content;
 }
 
 .feat_bg {
   background-color: var(--FADE-BLACK-BG);
   align-items: start;
-  height: 500px;
+  height: auto;
 }
 
-.awesome {
-  height: fit-content;
-}
-
-.feat_h2 {
-  padding: 30px 0 30px 0;
+.awesome,
+.seconds,
+.integrate {
+  height: auto;
+  padding: 20px;
 }
 
 .hero {
+  /* height: auto; */
   height: var(--IMAGE-HEIGHT);
   min-height: 90vh;
 }
+
 /* || SECOND DIV */
 /* .sec {
   padding: var(--SEC-FEAT-PADING);
 } */
 
 /* || THIRD DIV */
+
 .carbon_code {
   height: clamp(20rem, 2vh, 25rem);
+}
+
+/* ||..............SERVICES..............*/
+
+.service {
+  max-height: 100vh;
+  padding: 40px;
+}
+
+.serv {
+  text-align: center;
+  padding: 75px 100px 0 100px;
+}
+
+.serv_h3,
+.faq_2,
+.plan_tag {
+  font-size: var(--FS);
+  font-weight: var(--FW);
+  color: var(--BIG-FONT-COLOR);
+}
+
+.serv_grid_items {
+  display: inline-flex;
+  column-gap: 1rem;
+  /*  justify-content: flex-start;
+  gap: 1.5rem;
+  flex-flow: row wrap;
+  max-height: min-content; */
+}
+
+.block {
+  /*
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-flow: row wrap;*/
+  display: flex;
+  padding: var(--FEAT-H2-PADDING);
+  justify-content: space-between;
+  gap: 1rem;
+  /* align-items: ;
+ */
+}
+
+.block img {
+  height: 65px;
+  width: 65px;
+}
+
+/* ||.............. FAQs.............. */
+
+.faqs {
+  padding: 40px;
+  /*  flex-direction: ; */
+}
+
+.faq_2 {
+  display: flex;
+  flex-direction: row;
+}
+
+/* ||..............DOWNLOAD.............. */
+
+.download {
+  background-color: var(--MAIN-GREEN);
+  background: url(/pic/man1.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 25px 400px 30px 100px;
+  margin: 100px 0 100px 0;
+  color: var(--RARE-WHITE);
+  gap: 1rem;
+}
+
+.download_text,
+.download_p {
+  color: var(--RARE-WHITE);
+  padding: var(--HEADER-PADDING);
+}
+
+/* ||..............REVIEWS..............*/
+
+.review {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4rem;
+  max-height: 50vh;
+}
+
+.review-section {
+  padding: 2rem;
+}
+
+.review_wrapper {
+  background-color: var(--FADE-BLACK-BG);
+  align-content: center;
+  padding: 2rem;
+  min-height: 50vh;
+  justify-items: center;
+}
+
+.review_tags_div {
+  height: 100%;
+  display: flex;
+  max-width: 70rem;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.review_tags {
+  border: var(--NORM-BORDER);
+  border-radius: 20px;
+  background-color: var(--RARE-WHITE);
+  padding: 0.75rem;
+  height: auto;
+}
+
+/* ..............PLANS AND PRICES.............. */
+.plans {
+  display: flex;
+  text-align: center;
+  padding: 20px;
+}
+.plans_block {
+  border: var(--NORM-BORDER);
+  border-radius: 20px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  padding: var(--LINK-PADDING);
+  gap: 2rem;
+}
+
+.plan_tag:first-child,
+.plan_tag:nth-child(2) {
+  border-right: var(--NORM-BORDER);
+  padding-right: 15px;
+}
+
+/* ..............LAST WRAPPER.............. */
+.last_wrapper {
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  /*  aspect-ratio: 112 |; */
+  gap: 3rem;
+  padding: 2rem;
+  min-height: 40vh;
+}
+
+.bottom_wrapper {
+  white-space: wrap;
+  max-width: 30%;
+  /* margin: 0 auto; */
+}
+
+.bottom_ul li {
+  list-style-type: none;
+}
+.last_wrapper a:hover {
+  border-bottom: 1px solid var(--MAIN-GREEN);
+}
+
+.last_wrapper a::after :active {
+  color: #555;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem 2rem 1rem;
+
+  align-items: center;
+  text-align: center;
+}
+/*  */
+
+@media (min-width: 768px) {
+  .review_tags_div {
+    flex-direction: row;
+  }
 }
